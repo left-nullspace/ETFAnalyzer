@@ -33,6 +33,7 @@ def get_etf_list():
 def load_etf_data(etf_list, start_date, end_date):
     etf_data = {}
     for etf in etf_list:
-        data = yf.download(etf, start=start_date, end=end_date)
+        data = yf.download(etf, start=start_date, end=end_date, progress=False)
         etf_data[etf] = data['Adj Close']
     return pd.DataFrame(etf_data)
+
