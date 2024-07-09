@@ -21,7 +21,7 @@ selected_etfs = st.sidebar.multiselect(
 
 # Starting capital and date range
 starting_capital = st.sidebar.number_input("Enter Starting Capital", value=10000)
-min_date = datetime.date(2000, 1, 1)  # Set a reasonable minimum date
+min_date = datetime.date(2005, 1, 1)  # Set a reasonable minimum date
 max_date = datetime.date.today()  # Set the maximum date to today
 start_date = st.sidebar.date_input("Select Start Date", value=min_date, min_value=min_date, max_value=max_date)
 end_date = st.sidebar.date_input("Select End Date", value=max_date, min_value=min_date, max_value=max_date)
